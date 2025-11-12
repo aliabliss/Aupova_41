@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aupova_41"
         mc:Ignorable="d"
-        Title="ООО «41 размер»" Height="450" Width="800" FontFamily="Comic Sans MS" Icon="res/icon.ico">
+        Title="ООО «41 размер»" Height="900" Width="1500" FontFamily="Comic Sans MS" Icon="res/icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>

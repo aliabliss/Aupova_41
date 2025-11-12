@@ -23,6 +23,8 @@ namespace Aupova_41
         public ProductPage()
         {
             InitializeComponent();
+            var currentProduct = aupova_41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProduct;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Aupova_41Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PickUpPoint.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+    </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,6 +101,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Aupova_41Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aupova_41Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aupova_41Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -101,6 +143,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Aupova_41Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Aupova_41Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Aupova_41Model.edmx.diagram">
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +163,31 @@
     <Resource Include="res\icon.ico" />
     <Resource Include="res\logo.png" />
     <Resource Include="res\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aupova_41Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Aupova_41Model.Context.cs</LastGenOutput>
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Aupova_41Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+      <LastGenOutput>Aupova_41Model.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Товары\B320R5.jpg" />
+    <Resource Include="Товары\D329H3.jpg" />
+    <Resource Include="Товары\D572U8.jpg" />
+    <Resource Include="Товары\F572H7.jpg" />
+    <Resource Include="Товары\F635R4.jpg" />
+    <Resource Include="Товары\G432E4.jpg" />
+    <Resource Include="Товары\G783F5.jpg" />
+    <Resource Include="Товары\H782T5.jpg" />
+    <Resource Include="Товары\J384T6.jpg" />
+    <Resource Include="Товары\А112Т4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

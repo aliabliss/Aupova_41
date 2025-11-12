@@ -9,6 +9,6 @@
       Title="AddEditPage" FontFamily="Comic Sans MS">
 
     <Grid>
-        <TextBlock Text="Привет" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+       
      </Grid>
 </Page>
