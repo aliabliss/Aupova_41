@@ -5,27 +5,84 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Aupova_41"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="900"
+      d:DesignHeight="900" d:DesignWidth="1500"
       Title="ProductPage" FontFamily="Comic Sans MS">
 
     <Grid>
-        
-                <ListView Name="ProductListView" >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition></ColumnDefinition>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="267" Grid.Row="1" Margin="224,35,0,10">
+            <StackPanel RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.14"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <TextBlock Text="Поиск по наименованию" TextAlignment="Left"
+       Width="300" FontSize="15"/>
+                <TextBox x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
+       Width="262" FontSize="15"/>
+
+            </StackPanel>
+        </WrapPanel>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="355" Grid.Row="1" Margin="1102,34,0,1" RenderTransformOrigin="0.5,0.5">
+            <WrapPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.11" AngleX="0.007"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.498" X="0.003"/>
+                </TransformGroup>
+            </WrapPanel.RenderTransform>
+            <StackPanel  Orientation="Vertical" Width="312" Height="70">
+
+                <TextBlock Text="Фильтрация по скидке" TextAlignment="Left"
+       Width="306" FontSize="15" Height="25">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.017"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <ComboBox x:Name="ComboType" SelectionChanged="ComboType_SelectionChanged"
+      FontSize="15" Width="295" Height="23" RenderTransformOrigin="1.199,0.548" HorizontalAlignment="Left" >
+
+                    <TextBlock><Run Text="Все диапазоны"/></TextBlock>
+                    <TextBlock><Run Text="от 0 до 9,99%"/></TextBlock>
+                    <TextBlock><Run Text="от 10 до 14,99%"/></TextBlock>
+                    <TextBlock><Run Text="от 15 и более"/></TextBlock>
+                </ComboBox>
+            </StackPanel>
+        </WrapPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,35,0,4" Grid.Row="1" Width="234"  >
+            <RadioButton Content="По возврастанию стоимости" GroupName="Sort" Width="300" FontSize="15" Checked="RButtonUp_Checked" Name="RButtonUp" />
+            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="15" Checked="RButtonDown_Checked" Name="RButtonDown"  />
+        </StackPanel>
+        <ListView Name="ProductListView" Grid.Row="2" SelectionChanged="ProductListView_SelectionChanged" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="800"></ColumnDefinition>
-                                    <ColumnDefinition></ColumnDefinition>
-                                   
+                            <ColumnDefinition></ColumnDefinition>
+
                         </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="50"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
                         <Image Width="200" Grid.Column="0" Grid.RowSpan="400" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="ProductPhotoPath">
@@ -43,11 +100,30 @@
                         <TextBlock Text="{Binding ProductCost, StringFormat={}{0:0} рублей}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                         <TextBlock Text="{Binding ProductDiscountAmount, StringFormat={}{0} % }" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" FontSize="25"></TextBlock>
                         <TextBlock Text="Скидка" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" FontSize="20"></TextBlock>
+
                     </Grid>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            
+
+                </DataTemplate>
+
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <TextBlock x:Name="Status" 
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left" 
+               Margin="47,47,0,0" 
+               FontSize="20" 
+               Width="159" Grid.Row="1" Height="26">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.164"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 </Page>

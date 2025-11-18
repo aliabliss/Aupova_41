@@ -147,6 +147,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Aupova_41Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="Aupova_41Model.edmx.diagram">
       <DependentUpon>Aupova_41Model.edmx</DependentUpon>
     </None>
@@ -157,24 +158,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="res\icon.ico" />
     <Resource Include="res\logo.png" />
     <Resource Include="res\picture.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Aupova_41Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Aupova_41Model.Context.cs</LastGenOutput>
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
-    </Content>
-    <Content Include="Aupova_41Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
-      <LastGenOutput>Aupova_41Model.cs</LastGenOutput>
-    </Content>
     <Resource Include="Товары\B320R5.jpg" />
     <Resource Include="Товары\D329H3.jpg" />
     <Resource Include="Товары\D572U8.jpg" />
@@ -188,6 +176,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aupova_41Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+      <LastGenOutput>Aupova_41Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Aupova_41Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+      <LastGenOutput>Aupova_41Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

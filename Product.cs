@@ -32,13 +32,14 @@ namespace Aupova_41
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; }
         public string ProductPhoto { get; set; }
-        public string ProductPhotoPath {
+        public string ProductPhotoPath
+        {
             get
             {
                 if (ProductPhoto == null)
                     return null;
-                
-                    return "Товары/" + ProductPhoto;
+
+                return "Товары/" + ProductPhoto;
             }
         }
         public string ProductStatus { get; set; }
