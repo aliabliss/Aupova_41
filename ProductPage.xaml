@@ -8,13 +8,17 @@
       d:DesignHeight="900" d:DesignWidth="1500"
       Title="ProductPage" FontFamily="Comic Sans MS">
 
-    <Grid>
+    <Grid Background="#FFFFCC99" Margin="0,10,0,0">
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="267" Grid.Row="1" Margin="224,35,0,10">
+        <TextBlock Text="Вы авторизованы как " TextAlignment="Left" FontSize="20" Margin="10,0,1251,25"></TextBlock>
+        <TextBlock Text="Роль: " TextAlignment="Left" FontSize="20" Margin="10,22,1386,0"/>
+        <TextBlock Name="FIOTB" TextAlignment="Left" FontSize="20" Margin="223,0,10,17" ></TextBlock>
+        <TextBlock Name="RoleTB" TextAlignment="Left" FontSize="20" Margin="67,21,1168,0" ></TextBlock>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="267"  Grid.Row="1" Margin="248,15,0,14">
             <StackPanel RenderTransformOrigin="0.5,0.5">
                 <StackPanel.RenderTransform>
                     <TransformGroup>
@@ -25,13 +29,13 @@
                     </TransformGroup>
                 </StackPanel.RenderTransform>
                 <TextBlock Text="Поиск по наименованию" TextAlignment="Left"
-       Width="300" FontSize="15"/>
+       Width="300" FontSize="20"></TextBlock>
                 <TextBox x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
-       Width="262" FontSize="15"/>
+       Width="262" FontSize="15"></TextBox>
 
             </StackPanel>
         </WrapPanel>
-        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="355" Grid.Row="1" Margin="1102,34,0,1" RenderTransformOrigin="0.5,0.5">
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="355" Grid.Row="1" Margin="1103,13,0,22" RenderTransformOrigin="0.5,0.5">
             <WrapPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -43,7 +47,7 @@
             <StackPanel  Orientation="Vertical" Width="312" Height="70">
 
                 <TextBlock Text="Фильтрация по скидке" TextAlignment="Left"
-       Width="306" FontSize="15" Height="25">
+       Width="306" FontSize="20" Height="25">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -63,11 +67,12 @@
             </StackPanel>
         </WrapPanel>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,35,0,4" Grid.Row="1" Width="234"  >
-            <RadioButton Content="По возврастанию стоимости" GroupName="Sort" Width="300" FontSize="15" Checked="RButtonUp_Checked" Name="RButtonUp" />
-            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="15" Checked="RButtonDown_Checked" Name="RButtonDown"  />
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="630,17,0,22" Grid.Row="1" Width="300"  >
+            <RadioButton Content="По возврастанию стоимости" GroupName="Sort" Width="304" FontSize="20" Checked="RButtonUp_Checked" x:Name="RButtonUp" Height="25" />
+            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="304" FontSize="20" Checked="RButtonDown_Checked" x:Name="RButtonDown" Height="33"  />
         </StackPanel>
-        <ListView Name="ProductListView" Grid.Row="2" SelectionChanged="ProductListView_SelectionChanged" >
+        <ListView Name="ProductListView" Grid.Row="2" SelectionChanged="ProductListView_SelectionChanged" Margin="0,10,0,0" >
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -110,9 +115,9 @@
 
         </ListView>
         <TextBlock x:Name="Status" 
-               VerticalAlignment="Top"
+               VerticalAlignment="Center"
                HorizontalAlignment="Left" 
-               Margin="47,47,0,0" 
+               Margin="9,0,0,0" 
                FontSize="20" 
                Width="159" Grid.Row="1" Height="26">
             <TextBlock.RenderTransform>

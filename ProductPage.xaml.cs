@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,10 +24,19 @@ namespace Aupova_41
     {
         private List<Product> allProducts; 
 
-        public ProductPage()
+        public ProductPage(User user)
         {
             InitializeComponent();
-
+            FIOTB.Text = user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
+            switch (user.UserRole)
+            {
+                case 1:
+                    RoleTB.Text = "Клиент";break;
+                case 2:
+                    RoleTB.Text = "Менеджер"; break;
+                case 3:
+                    RoleTB.Text = "Администратор"; break;
+            }
             var currentProduct = aupova_41Entities.GetContext().Product.ToList();
             allProducts = aupova_41Entities.GetContext().Product.ToList();
             ProductListView.ItemsSource = allProducts;
@@ -34,6 +44,7 @@ namespace Aupova_41
             ComboType.SelectedIndex = 0;
             UpdateProduct();
         }
+        
         private void UpdateStatus()
         {
             int displayedCount = ProductListView.Items.Count;
