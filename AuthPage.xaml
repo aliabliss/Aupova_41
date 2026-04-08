@@ -29,11 +29,11 @@
             <TextBlock Name="captchaThreeWord" FontSize="22" TextDecorations="Strikethrough"></TextBlock>
             <TextBlock Name="captchaFourWord" FontSize="22" TextDecorations="Strikethrough" Margin="0,10,0,0"></TextBlock>
         </StackPanel>
-        <StackPanel x:Name="CaptchaPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,-15" Visibility="Collapsed" Grid.Column="1" Grid.Row="2" Width="422">
-            <TextBlock Text="Введите капчу:" FontSize="22"  VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <StackPanel x:Name="CaptchaPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="458,266,0,0" Visibility="Collapsed" Grid.Row="1" Width="689" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="105" VerticalAlignment="Top">
+            <TextBlock Text="Введите капчу:" FontSize="30"  VerticalAlignment="Center" Margin="0,0,10,0"/>
             <TextBlock x:Name="CaptchaText" FontSize="22" FontWeight="Bold" Margin="5" 
                Foreground="Black" TextDecorations="Strikethrough" VerticalAlignment="Center"/>
-            <TextBox x:Name="CaptchaInput" Width="153" Margin="5" Height="25" VerticalAlignment="Center"/>
+            <TextBox x:Name="CaptchaInput" Width="377" Height="63"/>
 
         </StackPanel>
     </Grid>

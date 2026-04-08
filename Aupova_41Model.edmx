@@ -24,7 +24,7 @@
           </Key>
           <Property Name="OrderID" Type="int" Nullable="false" />
           <Property Name="ProductArticleNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="OrderProductCount" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrderProductCount" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PickUpPoint">
           <Key>
@@ -188,7 +188,7 @@
           </Key>
           <Property Name="OrderID" Type="Int32" Nullable="false" />
           <Property Name="ProductArticleNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="OrderProductCount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OrderProductCount" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Order" Relationship="Self.FK__OrderProd__Order__534D60F1" FromRole="OrderProduct" ToRole="Order" />
           <NavigationProperty Name="Product" Relationship="Self.FK__OrderProd__Produ__5441852A" FromRole="OrderProduct" ToRole="Product" />
         </EntityType>

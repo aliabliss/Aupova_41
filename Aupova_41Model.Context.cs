@@ -12,7 +12,7 @@ namespace Aupova_41
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class aupova_41Entities : DbContext
     {
         private static aupova_41Entities _context;
@@ -26,12 +26,12 @@ namespace Aupova_41
             : base("name=aupova_41Entities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }

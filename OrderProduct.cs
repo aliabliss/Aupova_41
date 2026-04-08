@@ -16,7 +16,7 @@ namespace Aupova_41
     {
         public int OrderID { get; set; }
         public string ProductArticleNumber { get; set; }
-        public string OrderProductCount { get; set; }
+        public int OrderProductCount { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

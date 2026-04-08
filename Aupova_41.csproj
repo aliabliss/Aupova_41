@@ -64,34 +64,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Aupova_41Model.cs">
+    <Compile Include="aupova_41Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aupova_41Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aupova_41Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aupova_41Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderProduct.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderWindow.xaml.cs">
       <DependentUpon>OrderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="PickUpPoint.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>Aupova_41Model.tt</DependentUpon>
+      <DependentUpon>aupova_41Model.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -111,16 +121,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Aupova_41Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Aupova_41Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Aupova_41Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -157,13 +157,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Aupova_41Model.edmx">
+    <EntityDeploy Include="aupova_41Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Aupova_41Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>aupova_41Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="Aupova_41Model.edmx.diagram">
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
+    <None Include="aupova_41Model.edmx.diagram">
+      <DependentUpon>aupova_41Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -192,15 +192,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Aupova_41Model.Context.tt">
+    <Content Include="aupova_41Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
-      <LastGenOutput>Aupova_41Model.Context.cs</LastGenOutput>
+      <DependentUpon>aupova_41Model.edmx</DependentUpon>
+      <LastGenOutput>aupova_41Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Aupova_41Model.tt">
+    <Content Include="aupova_41Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Aupova_41Model.edmx</DependentUpon>
-      <LastGenOutput>Aupova_41Model.cs</LastGenOutput>
+      <DependentUpon>aupova_41Model.edmx</DependentUpon>
+      <LastGenOutput>aupova_41Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

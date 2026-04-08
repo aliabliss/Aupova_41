@@ -72,7 +72,11 @@
             <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="304" FontSize="20" Checked="RButtonDown_Checked" x:Name="RButtonDown" Height="33"  />
         </StackPanel>
         <ListView Name="ProductListView" Grid.Row="2" SelectionChanged="ProductListView_SelectionChanged" Margin="0,10,0,0" >
-            
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить к заказу" Click="AddToOrderMenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -129,6 +133,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
+        <Button x:Name="ViewOrderBtn" Content="Корзина" Width="NaN" Height="40" Margin="1254,3,82,7" Visibility="Collapsed" Click="ViewOrderBtn_Click"></Button>
 
     </Grid>
 </Page>
